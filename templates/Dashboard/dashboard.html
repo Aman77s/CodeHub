@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1 class="text-center ">Welcome To DashBoard !</h1>
+
+<div class="row mt-5">
+    <!-- left sidebar -->
+   <!-- load left sidebar -->
+
+   {% include "./sidebar.html" %}
+
+    <!-- right sidebar -->
+    <div class="col-md-9">
+        <div class="row">
+            <div class="col">
+                <div class="card border-default mb-3">
+                    <div class="card-header text-center text-uppercase font-weight-bold">
+                        <h3 class="text-dark">All Categories</h3>
+                    </div>
+                    <div class="card-body text-dark">
+                        <h5 class="cart-title text-center">{{ category }}</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card border-default mb-3">
+                    <div class="card-header text-center text-uppercase font-weight-bold">
+                        <h3 class="text-dark">All Posts</h3>
+                    </div>
+                    <div class="card-body text-dark">
+                        <h5 class="cart-title text-center">{{ post }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

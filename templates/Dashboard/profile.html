@@ -1,0 +1,37 @@
+<!-- profile.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+{% include './sidebar.html' %}
+
+
+
+  <div class="col-md-9">
+    <h2>Update Your Profile Picture</h2>
+
+    <!-- Form to upload or update profile picture -->
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      
+      <div class="form-group">
+        <label for="id_picture">Profile Picture</label>
+        <input type="file" name="picture" class="form-control" id="id_picture">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Update Profile Picture</button>
+    </form>
+
+    <hr>
+
+    <h4>Current Profile Picture</h4>
+    <div class="profile-info">
+      {% if user_profile.picture %}
+        <img src="{{ user_profile.picture.url }}" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%;">
+      {% else %}
+        <p>No profile picture uploaded</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

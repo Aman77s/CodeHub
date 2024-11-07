@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- About 3 - Bootstrap Brain Component -->
+<section class="py-3 py-md-5">
+    <div class="container mb-4 mb-md-5">
+        <div class="row">
+            <!-- Image Column -->
+            <div class="col-md-4">
+                <img class="img-fluid rounded shadow" loading="lazy" src="{% static 'assets/img/featured/itsme.jpg' %}" alt="About 3">
+            </div>
+            <!-- About Me Column -->
+            <div class="col-md-8">
+                <div class="text-center text-md-start">
+                    <h2 class="display-3 fw-bold lh-1">Aman Saharan</h2>
+                    <p class="text-secondary fs-4 mb-2">Full Stack Web Developer</p>
+                    <hr class="w-25 mx-auto ms-md-0 mb-4 text-secondary">
+                    <p>
+                        About Me
+                        Hello! I'm Aman, a passionate full-stack web developer with a keen interest in building efficient, user-friendly, and scalable web applications. With a solid foundation in both front-end and back-end technologies, I enjoy crafting seamless digital experiences.
+                    </p>
+                    <h4>My Skills</h4>
+                    <ul>
+                        <li><b>Front-End Development:</b> Proficient in HTML, CSS, JavaScript, React, and Bootstrap. I focus on creating responsive and interactive user interfaces.</li>
+                        <li><b>Back-End Development:</b> Experienced in Python and Django for building robust server-side applications. I also work with databases like PostgreSQL and MySQL.</li>
+                        <li><b>Full-Stack Projects:</b> Skilled in integrating front-end and back-end technologies to deliver complete web solutions.</li>
+                        <li><b>Additional Expertise:</b> Familiar with version control using Git, and deployment on cloud platforms.</li>
+                    </ul>
+                    <p>I believe that the best designs are those that are based on a deep understanding of the user's needs and goals. I start every project by conducting thorough user research to learn about the user's pain points, motivations, and expectations. I then use this information to create designs that are both easy to use and enjoyable.</p>
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-lg" type="button">
+                            <a href="https://www.linkedin.com/in/aman-saharan-16869029b/" style="text-decoration: none; color: white;" target="next">Hire Me</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

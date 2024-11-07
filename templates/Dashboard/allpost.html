@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}<div class="row">
+    <!-- left sidebar -->
+   <!-- load left sidebar -->
+
+   {% include './sidebar.html' %}
+
+    <!-- right sidebar -->
+    
+        <div class="col-md-9">
+            <h3>All Categories</h3>
+            <a href="{% url "addpost" %}" class="btn btn-dark text-light float-right mb-2">Add New Post</a>
+              <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Title</th>
+                      <th>Category</th>
+                      <th>Author</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for post in posts %}
+                    <tr> 
+                      <th>{{ forloop.counter }}</th>
+                      <td>{{ post.title }}</td>
+                      <td>{{ post.category }}</td>
+                      <td>{{ post.author }}</td>
+                      <td>{{post.choices}}</td>
+                      <td>
+                        <a href="{% url "editpost" post.id%}"><i class="fa fa-edit text-success"></i></a> &nbsp;
+                        <a href="{% url "deletepost" post.id %}"><i class="fa fa-trash text-danger"></i></a>&nbsp;
+                    </td>
+                    </tr>
+                  {% endfor %}
+                  
+                   
+                  </tbody>
+                </table>
+          </div>
+
+
+{% endblock  %}
